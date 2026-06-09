@@ -246,9 +246,9 @@ const rankings = { C: rankC, D: rankD, E: rankE };
 // Instruções: Drive → botão direito no PDF → "Compartilhar" → "Qualquer pessoa com o link" → copiar link
 // Substitua os links abaixo pelos links reais do seu Google Drive
 const pdfLinks = {
-  C: "https://drive.google.com/file/d/SEU_ID_AQUI_CAT_C/view",
-  D: "https://drive.google.com/file/d/SEU_ID_AQUI_CAT_D/view",
-  E: null, // adicione quando tiver o PDF da Cat E
+  C: "https://drive.google.com/file/d/1xGo3w_wz5nIwEXzBVFBcKOsTdV1fQR1j/view?usp=sharing",
+  D: "https://drive.google.com/file/d/1C6TOII6R3-ZzONpInzJEiLSnF5yhhlrm/view?usp=sharing",
+  E: null,
 };
 
 // ─── TORNEIOS ─────────────────────────────────────────────────────
@@ -437,7 +437,7 @@ function RankingTab() {
               <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {rankC.length} atletas · 7 etapas realizadas · 2026
             </div>
           </div>
-          <a href="https://drive.google.com/file/d/SEU_LINK_PDF_C/view" target="_blank" rel="noreferrer" style={{
+          <a href="https://drive.google.com/file/d/1xGo3w_wz5nIwEXzBVFBcKOsTdV1fQR1j/view?usp=sharing" target="_blank" rel="noreferrer" style={{
             display:"flex", alignItems:"center", justifyContent:"center", gap:6,
             background:Q.pink, color:Q.white, borderRadius:8, padding:"8px 0",
             fontSize:11, fontWeight:700, letterSpacing:.5, textDecoration:"none",
@@ -456,7 +456,7 @@ function RankingTab() {
               <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {rankD.length} atletas · 7 etapas realizadas · 2026
             </div>
           </div>
-          <a href="https://drive.google.com/file/d/SEU_LINK_PDF_D/view" target="_blank" rel="noreferrer" style={{
+          <a href="https://drive.google.com/file/d/1C6TOII6R3-ZzONpInzJEiLSnF5yhhlrm/view?usp=sharing" target="_blank" rel="noreferrer" style={{
             display:"flex", alignItems:"center", justifyContent:"center", gap:6,
             background:Q.pink, color:Q.white, borderRadius:8, padding:"8px 0",
             fontSize:11, fontWeight:700, letterSpacing:.5, textDecoration:"none",
