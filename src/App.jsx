@@ -232,23 +232,163 @@ const rankD = [
 ];
 
 const rankE = [
-  { rank:1, name:"Isabela Rocha",   pts:1700 },
-  { rank:2, name:"Natalia Fonseca", pts:1510 },
-  { rank:3, name:"Camila Prado",    pts:1290 },
-  { rank:4, name:"Larissa Monte",   pts:1050 },
-  { rank:5, name:"Renata Duarte",   pts:890  },
-  { rank:6, name:"Silvia Gama",     pts:720  },
+  { rank:1,   name:"Genilma Moura",            pts:2400 },
+  { rank:2,   name:"Adclis Souza",             pts:1850 },
+  { rank:3,   name:"Julia de Barros",          pts:1200 },
+  { rank:4,   name:"Monique De Lazari",        pts:1100 },
+  { rank:5,   name:"Nastassia Yurk",           pts:1000 },
+  { rank:5,   name:"Elisa Andrade",            pts:1000 },
+  { rank:5,   name:"Leticia Rezende",          pts:1000 },
+  { rank:8,   name:"Karol Boriolo",            pts:900  },
+  { rank:8,   name:"Daniele Pandini",          pts:900  },
+  { rank:8,   name:"Karine Age",               pts:900  },
+  { rank:8,   name:"Isabela Hermont",          pts:900  },
+  { rank:8,   name:"Maxine Vessaro",           pts:900  },
+  { rank:13,  name:"Laura Moreschi",           pts:850  },
+  { rank:14,  name:"Cristiane Favorito",       pts:750  },
+  { rank:15,  name:"Talita Fabene",            pts:700  },
+  { rank:15,  name:"Caroline Cunha",           pts:700  },
+  { rank:17,  name:"Andressa Almeida",         pts:600  },
+  { rank:17,  name:"Rose Esudero",             pts:600  },
+  { rank:17,  name:"Stella Santana",           pts:600  },
+  { rank:17,  name:"Mari Dagostin",            pts:600  },
+  { rank:21,  name:"Eliane Fabrini",           pts:550  },
+  { rank:21,  name:"Nicole Lima",              pts:550  },
+  { rank:21,  name:"Helene Fortes",            pts:550  },
+  { rank:21,  name:"Cristiane Lirmann",        pts:550  },
+  { rank:21,  name:"Liliana Camelier",         pts:550  },
+  { rank:21,  name:"Bruna Moribe",             pts:550  },
+  { rank:21,  name:"Laura Carraro",            pts:550  },
+  { rank:21,  name:"Arlene Borba",             pts:550  },
+  { rank:21,  name:"Arlene Philippsen",        pts:550  },
+  { rank:21,  name:"Michely Matzenbacher",     pts:550  },
+  { rank:21,  name:"Camila Dellatorre",        pts:550  },
+  { rank:21,  name:"Paula Silka",              pts:550  },
+  { rank:21,  name:"Tatiele Carvalho",         pts:550  },
+  { rank:21,  name:"Ana Paula F. Melo",        pts:550  },
+  { rank:21,  name:"Beatriz Ogata",            pts:550  },
+  { rank:21,  name:"Eunice Munhoz",            pts:550  },
+  { rank:21,  name:"Camila Casagrande",        pts:550  },
+  { rank:38,  name:"Raquel Lucca",             pts:500  },
+  { rank:39,  name:"Amanda Macuco",            pts:400  },
+  { rank:39,  name:"Maria Fernanda Geara",     pts:400  },
+  { rank:41,  name:"Anna Paula Tonedo",        pts:350  },
+  { rank:41,  name:"Priscila",                 pts:350  },
+  { rank:41,  name:"Silvia Schneider",         pts:350  },
+  { rank:41,  name:"Leticia Re",               pts:350  },
+  { rank:41,  name:"Gabriela Guerreiro",       pts:350  },
+  { rank:41,  name:"Arizla",                   pts:350  },
+  { rank:41,  name:"Taiz Paiva",               pts:350  },
+  { rank:41,  name:"Eliziane Lara",            pts:350  },
+  { rank:41,  name:"Elaine Oleczewski",        pts:350  },
+  { rank:41,  name:"Karla Ruggieri",           pts:350  },
+  { rank:51,  name:"Janaina Torres",           pts:300  },
+  { rank:51,  name:"Dolores Folador",          pts:300  },
+  { rank:51,  name:"Natalie Thome",            pts:300  },
+  { rank:54,  name:"Tatiana Salvinski",        pts:250  },
+  { rank:54,  name:"Aniele",                   pts:250  },
+  { rank:54,  name:"Luciane Melo",             pts:250  },
+  { rank:57,  name:"Cinta Claudino",           pts:200  },
+  { rank:57,  name:"Rose Esudero",             pts:200  },
+  { rank:57,  name:"Julia Licnevski",          pts:200  },
+  { rank:57,  name:"Romila Schmider",          pts:200  },
+  { rank:57,  name:"Francielli Scarpetta",     pts:200  },
+  { rank:57,  name:"Daniele Teixeira",         pts:200  },
+  { rank:57,  name:"Tatiane Ballio",           pts:200  },
+  { rank:57,  name:"Gabriela Cunha",           pts:200  },
+  { rank:57,  name:"Ediene Lara",              pts:200  },
+  { rank:57,  name:"Vanessa Perez Alvarez",    pts:200  },
+  { rank:57,  name:"Jaqueline Santana",        pts:200  },
+  { rank:57,  name:"Neia Corsini",             pts:200  },
+  { rank:57,  name:"Patricia Bonilha",         pts:200  },
+  { rank:70,  name:"Carla Lemberg",            pts:150  },
+  { rank:70,  name:"Lara Tonet",               pts:150  },
+  { rank:70,  name:"Adriana Azinari",          pts:150  },
+  { rank:73,  name:"Geisa Pedroso",            pts:100  },
+  { rank:73,  name:"Gisele Luz",               pts:100  },
+  { rank:73,  name:"Gabriela Diniz",           pts:100  },
+  { rank:73,  name:"Jessica Maciel",           pts:100  },
+  { rank:73,  name:"Geslaine Rovaris",         pts:100  },
+  { rank:73,  name:"Leticia Castelinho",       pts:100  },
+  { rank:73,  name:"Manoela Sala",             pts:100  },
+  { rank:73,  name:"Carol Arzua",              pts:100  },
+  { rank:73,  name:"Francielli Scarpetta",     pts:100  },
+  { rank:73,  name:"Gabriela Matte",           pts:100  },
+  { rank:73,  name:"Cassiana Vieira",          pts:100  },
+  { rank:73,  name:"Eneli Brasil",             pts:100  },
+  { rank:73,  name:"Rafaela Bedin",            pts:100  },
+  { rank:73,  name:"Paula Fukishima",          pts:100  },
+  { rank:73,  name:"Renata Sartori",           pts:100  },
+  { rank:73,  name:"Andressa Nuss",            pts:100  },
+  { rank:89,  name:"Laressa Santos",           pts:50   },
+  { rank:89,  name:"Andressa Santos",          pts:50   },
+  { rank:89,  name:"Gabriela Sivek",           pts:50   },
+  { rank:89,  name:"Keytty Schinemann",        pts:50   },
+  { rank:89,  name:"Adri Vidal",               pts:50   },
+  { rank:89,  name:"Luma Dias",                pts:50   },
+  { rank:89,  name:"Marley",                   pts:50   },
+  { rank:89,  name:"Camila Torres",            pts:50   },
+  { rank:89,  name:"Taisa Rossi",              pts:50   },
+  { rank:89,  name:"Marcia Pizzolatti",        pts:50   },
+  { rank:89,  name:"Camile Motta",             pts:50   },
+  { rank:89,  name:"Vanessa D.S.da Silva",     pts:50   },
+  { rank:89,  name:"Ana Paula Posato",         pts:50   },
+  { rank:89,  name:"Bianca Caselato",          pts:50   },
+  { rank:89,  name:"Lara Porto",               pts:50   },
+  { rank:89,  name:"Valentina",                pts:50   },
+  { rank:89,  name:"Beatriz Martins",          pts:50   },
+  { rank:89,  name:"Francielli Kroetz",        pts:50   },
+  { rank:89,  name:"Bruna Greggio",            pts:50   },
+  { rank:89,  name:"Vera Regina Santos",       pts:50   },
+  { rank:89,  name:"Taiz Carrion",             pts:50   },
+  { rank:89,  name:"Karine Moura",             pts:50   },
+  { rank:89,  name:"Ana Claudia Dias",         pts:50   },
+  { rank:89,  name:"Helena Leal",              pts:50   },
+  { rank:89,  name:"Ale Santi",                pts:50   },
+  { rank:89,  name:"Erikia Desan",             pts:50   },
+  { rank:89,  name:"Leticia(Castelinho)Soares",pts:50   },
+  { rank:89,  name:"Harumi Watanabe",          pts:50   },
+  { rank:89,  name:"Julyane Brito",            pts:50   },
+  { rank:89,  name:"Andrea Pedroso",           pts:50   },
+  { rank:89,  name:"Adryelle Cantarella",      pts:50   },
+  { rank:89,  name:"Alicia Cruz",              pts:50   },
+  { rank:89,  name:"Marina Alcazar",           pts:50   },
+  { rank:89,  name:"Mariane C. Vaz",           pts:50   },
+  { rank:89,  name:"Mariele Zanco",            pts:50   },
+  { rank:89,  name:"Ana Paula Vargas",         pts:50   },
+  { rank:89,  name:"Luna",                     pts:50   },
+  { rank:89,  name:"Juliana Torres",           pts:50   },
+  { rank:89,  name:"Juliana Mezzaroba",        pts:50   },
+  { rank:89,  name:"Marta Ferreira",           pts:50   },
+  { rank:89,  name:"Angela Kunz",              pts:50   },
+  { rank:89,  name:"Josiane Carvalho",         pts:50   },
+  { rank:89,  name:"Dani Cwikla",              pts:50   },
+  { rank:89,  name:"Helen Habinoski",          pts:50   },
+  { rank:89,  name:"Marcia Afonso Degani",     pts:50   },
+  { rank:89,  name:"Larissa Bento Villanti",   pts:50   },
+  { rank:89,  name:"Silvia Tavares",           pts:50   },
+  { rank:89,  name:"Cristiane Pavelec",        pts:50   },
+  { rank:89,  name:"Talita Wicthoff",          pts:50   },
+  { rank:89,  name:"Vanessa Neuman",           pts:50   },
+  { rank:89,  name:"Karizhiani",               pts:50   },
+  { rank:89,  name:"Celia Frederici",          pts:50   },
+  { rank:89,  name:"Ana Garcia",               pts:50   },
+  { rank:89,  name:"Carla Bortoleto",          pts:50   },
+  { rank:89,  name:"Nathy Palma",              pts:50   },
+  { rank:89,  name:"Adriana Gonçalves",        pts:50   },
+  { rank:89,  name:"Rafaela Tepo",             pts:50   },
+  { rank:89,  name:"Beatriz Pavelec",          pts:50   },
+  { rank:89,  name:"Brenda Leal",              pts:50   },
 ];
+
 
 const rankings = { C: rankC, D: rankD, E: rankE };
 
-// ─── LINKS DOS PDFs (após subir no Google Drive, cole os links aqui) ──
-// Instruções: Drive → botão direito no PDF → "Compartilhar" → "Qualquer pessoa com o link" → copiar link
-// Substitua os links abaixo pelos links reais do seu Google Drive
+// ─── LINKS DOS PDFs ──────────────────────────────────────────────
 const pdfLinks = {
-  C: "https://drive.google.com/file/d/1xGo3w_wz5nIwEXzBVFBcKOsTdV1fQR1j/view?usp=sharing",
-  D: "https://drive.google.com/file/d/1C6TOII6R3-ZzONpInzJEiLSnF5yhhlrm/view?usp=sharing",
-  E: null,
+  C: "https://drive.google.com/file/d/1XXzDT8BrlexGRdmfY_czXSUJ8p4uxjv-/view?usp=drive_link",
+  D: "https://drive.google.com/file/d/17j5-Wk_Q7H_ZFZ1i9Wlvv2XdtFLvJM3y/view?usp=drive_link",
+  E: "https://drive.google.com/file/d/1SE3XnyijuVq9O7I-nWX_2ezHS7Z2SHnj/view?usp=drive_link",
 };
 
 // ─── TORNEIOS ─────────────────────────────────────────────────────
@@ -277,16 +417,21 @@ const torneios = [
 ];
 
 const etapas = [
-  { num:1, data:"21/jan", local:"Arena 3",   done:true  },
-  { num:2, data:"11/fev", local:"Pahragon",  done:true  },
-  { num:3, data:"12/mar", local:"WIN",       done:true  },
-  { num:4, data:"26/mar", local:"Eco Arena", done:true  },
-  { num:5, data:"25/abr", local:"I 9",       done:true  },
-  { num:6, data:"14/mai", local:"Arena 3",   done:true  },
-  { num:7, data:"29/mai", local:"CBS",       done:true  },
-  { num:8, data:"21/jun", local:"Arena 3",   done:false },
-  { num:9, data:"26/jul", local:"Pahragon",  done:false },
-  { num:10,data:"08/nov", local:"CBS Arena", done:false },
+  { num:1,  data:"21/jan",    local:"ARENA 3",   done:true  },
+  { num:2,  data:"11/fev",    local:"PAHRAGON",  done:true  },
+  { num:3,  data:"12/mar",    local:"WIN ECO",   done:true  },
+  { num:4,  data:"26/mar",    local:"ARENA 3",   done:true  },
+  { num:5,  data:"25/abr",    local:"INOVE",     done:true  },
+  { num:6,  data:"14/mai",    local:"ARENA 3",   done:true  },
+  { num:7,  data:"29/mai",    local:"CBS",       done:true  },
+  { num:8,  data:"25/jun",    local:"ARENA 3",   done:false },
+  { num:9,  data:"10/jul",    local:"PAHRAGON",  done:false },
+  { num:10, data:"23/jul",    local:"INOVE",     done:false },
+  { num:11, data:"27/ago",    local:"WIN ECO",   done:false },
+  { num:12, data:"A definir", local:"",          done:false },
+  { num:13, data:"A definir", local:"",          done:false },
+  { num:14, data:"A definir", local:"",          done:false },
+  { num:15, data:"A definir", local:"",          done:false },
 ];
 
 const fmtDate = d => new Date(d+"T12:00:00").toLocaleDateString("pt-BR",{day:"2-digit",month:"short"});
@@ -300,7 +445,6 @@ function Header({ activeTab, setActiveTab }) {
   ];
   return (
     <nav style={{ background: Q.dark, borderBottom:`3px solid ${Q.lime}`, position:"sticky", top:0, zIndex:100 }}>
-      {/* logo + título */}
       <div style={{ display:"flex", alignItems:"center", gap:12, padding:"14px 18px 10px" }}>
         <QueensLogo size={44} />
         <div>
@@ -313,7 +457,6 @@ function Header({ activeTab, setActiveTab }) {
           <div style={{ color:"rgba(255,255,255,.45)", fontSize:9, letterSpacing:2 }}>BEACH TÊNIS · EXCLUSIVO FEMININO · 2026</div>
         </div>
       </div>
-      {/* tabs */}
       <div style={{ display:"flex", borderTop:"1px solid rgba(255,255,255,.08)" }}>
         {tabs.map(t => (
           <button key={t.id} onClick={()=>setActiveTab(t.id)} style={{
@@ -395,10 +538,10 @@ function RankItem({ p, i }) {
 function RankingTab() {
   const [cat,setCat] = useState("C");
   const data = rankings[cat] || [];
+  const counts = { C: rankC.length, D: rankD.length, E: rankE.length };
 
   return (
     <div style={{ padding:"20px 16px" }}>
-      {/* cabeçalho */}
       <div style={{ marginBottom:16 }}>
         <div style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:28, letterSpacing:3,
@@ -408,7 +551,6 @@ function RankingTab() {
         <div style={{ color:Q.gray, fontSize:12 }}>Temporada 2026 · Feminino</div>
       </div>
 
-      {/* categorias */}
       <div style={{ display:"flex", gap:8, marginBottom:18 }}>
         {["C","D","E"].map(c=>(
           <button key={c} onClick={()=>setCat(c)} style={{
@@ -424,64 +566,28 @@ function RankingTab() {
         ))}
       </div>
 
-      {/* badge dados reais + link PDF */}
-      {cat==="C" && (
-        <div style={{
-          background:`linear-gradient(135deg,${Q.pink}15,${Q.lime}15)`,
-          border:`1px solid ${Q.pink}44`, borderRadius:12,
-          padding:"10px 14px", marginBottom:16,
-        }}>
-          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
-            <span style={{fontSize:16}}>📄</span>
-            <div style={{ fontSize:11, color:Q.dark }}>
-              <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {rankC.length} atletas · 7 etapas realizadas · 2026
-            </div>
+      <div style={{
+        background:`linear-gradient(135deg,${Q.pink}15,${Q.lime}15)`,
+        border:`1px solid ${Q.pink}44`, borderRadius:12,
+        padding:"10px 14px", marginBottom:16,
+      }}>
+        <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+          <span style={{fontSize:16}}>📄</span>
+          <div style={{ fontSize:11, color:Q.dark }}>
+            <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {counts[cat]} atletas · 7 etapas realizadas · 2026
           </div>
-          <a href="https://drive.google.com/file/d/1xGo3w_wz5nIwEXzBVFBcKOsTdV1fQR1j/view?usp=sharing" target="_blank" rel="noreferrer" style={{
+        </div>
+        <a
+          href={pdfLinks[cat]}
+          target="_blank"
+          rel="noreferrer"
+          style={{
             display:"flex", alignItems:"center", justifyContent:"center", gap:6,
             background:Q.pink, color:Q.white, borderRadius:8, padding:"8px 0",
             fontSize:11, fontWeight:700, letterSpacing:.5, textDecoration:"none",
-          }}>📥 BAIXAR RANKING COMPLETO — CAT C</a>
-        </div>
-      )}
-      {cat==="D" && (
-        <div style={{
-          background:`linear-gradient(135deg,${Q.pink}15,${Q.lime}15)`,
-          border:`1px solid ${Q.pink}44`, borderRadius:12,
-          padding:"10px 14px", marginBottom:16,
-        }}>
-          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
-            <span style={{fontSize:16}}>📄</span>
-            <div style={{ fontSize:11, color:Q.dark }}>
-              <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {rankD.length} atletas · 7 etapas realizadas · 2026
-            </div>
-          </div>
-          <a href="https://drive.google.com/file/d/1C6TOII6R3-ZzONpInzJEiLSnF5yhhlrm/view?usp=sharing" target="_blank" rel="noreferrer" style={{
-            display:"flex", alignItems:"center", justifyContent:"center", gap:6,
-            background:Q.pink, color:Q.white, borderRadius:8, padding:"8px 0",
-            fontSize:11, fontWeight:700, letterSpacing:.5, textDecoration:"none",
-          }}>📥 BAIXAR RANKING COMPLETO — CAT D</a>
-        </div>
-      )}
-      {cat==="E" && (
-        <div style={{
-          background:`linear-gradient(135deg,${Q.pink}15,${Q.lime}15)`,
-          border:`1px solid ${Q.pink}44`, borderRadius:12,
-          padding:"10px 14px", marginBottom:16,
-        }}>
-          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
-            <span style={{fontSize:16}}>📄</span>
-            <div style={{ fontSize:11, color:Q.dark }}>
-              <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {rankE.length} atletas · 7 etapas realizadas · 2026
-            </div>
-          </div>
-          <a href="https://drive.google.com/file/d/SEU_LINK_PDF_E/view" target="_blank" rel="noreferrer" style={{
-            display:"flex", alignItems:"center", justifyContent:"center", gap:6,
-            background:Q.pink, color:Q.white, borderRadius:8, padding:"8px 0",
-            fontSize:11, fontWeight:700, letterSpacing:.5, textDecoration:"none",
-          }}>📥 BAIXAR RANKING COMPLETO — CAT E</a>
-        </div>
-      )}
+          }}
+        >📥 BAIXAR RANKING COMPLETO — CAT {cat}</a>
+      </div>
 
       <Podium players={data.slice(0,3)} />
 
@@ -504,7 +610,6 @@ function EtapasTab() {
         <div style={{ color:Q.gray, fontSize:12 }}>Calendário completo · {etapas.filter(e=>e.done).length} de {etapas.length} realizadas</div>
       </div>
 
-      {/* barra progresso */}
       <div style={{ background:Q.grayL, borderRadius:8, height:8, overflow:"hidden", marginBottom:20 }}>
         <div style={{
           width:`${(etapas.filter(e=>e.done).length/etapas.length)*100}%`,
@@ -514,7 +619,6 @@ function EtapasTab() {
         }} />
       </div>
 
-      {/* timeline */}
       <div style={{ marginBottom:24 }}>
         {etapas.map((e,i)=>(
           <div key={i} style={{ display:"flex", gap:12, alignItems:"flex-start" }}>
@@ -551,144 +655,6 @@ function EtapasTab() {
           </div>
         ))}
       </div>
-
-    </div>
-  );
-}
-
-function InscricoesTab() {
-  const [sel,setSel]     = useState(null);
-  const [form,setForm]   = useState({nome:"",dupla:"",cat:"",contato:""});
-  const [ok,setOk]       = useState(false);
-
-  const abertas = torneios.filter(t=>t.status==="inscricoes");
-
-  if (ok) return (
-    <div style={{ padding:"40px 16px", display:"flex", flexDirection:"column", alignItems:"center", gap:16, textAlign:"center" }}>
-      <QueensLogo size={64}/>
-      <div style={{
-        fontFamily:"'Bebas Neue',sans-serif", fontSize:28, letterSpacing:3,
-        background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
-        WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
-      }}>INSCRIÇÃO REALIZADA!</div>
-      <div style={{ color:Q.gray, fontSize:13 }}>Aguarde a confirmação via contato informado. 💪</div>
-      <div style={{
-        background:`linear-gradient(135deg,${Q.dark},#3A0030)`,
-        borderRadius:16, padding:"16px 20px", width:"100%", textAlign:"left",
-      }}>
-        {[["Atleta",form.nome],["Dupla",form.dupla||"—"],["Torneio",torneios.find(t=>t.id===sel)?.nome],["Categoria",`Cat ${form.cat} · Feminino`],["Contato",form.contato]].map(([k,v])=>(
-          <div key={k} style={{ display:"flex", justifyContent:"space-between", padding:"6px 0", borderBottom:`1px solid rgba(255,255,255,.08)` }}>
-            <span style={{ color:"rgba(255,255,255,.4)", fontSize:11 }}>{k}</span>
-            <span style={{ color:Q.white, fontSize:12, fontWeight:700 }}>{v}</span>
-          </div>
-        ))}
-      </div>
-      <button onClick={()=>{setOk(false);setSel(null);setForm({nome:"",dupla:"",cat:"",contato:""}); }} style={{
-        width:"100%", padding:"14px 0", borderRadius:12, border:"none",
-        background:`linear-gradient(135deg,${Q.pink},${Q.pinkD})`,
-        color:Q.white, fontWeight:900, fontSize:14, cursor:"pointer",
-        boxShadow:`0 6px 20px ${Q.pink}44`,
-      }}>← NOVA INSCRIÇÃO</button>
-    </div>
-  );
-
-  if (sel) {
-    const t = torneios.find(x=>x.id===sel);
-    const pronto = form.nome && form.cat && form.contato;
-    return (
-      <div style={{ padding:"20px 16px" }}>
-        <button onClick={()=>setSel(null)} style={{ background:"none",border:"none",cursor:"pointer",color:Q.pink,fontSize:13,fontWeight:700,padding:0,marginBottom:14,display:"flex",alignItems:"center",gap:4 }}>← Voltar</button>
-        <div style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:24, letterSpacing:2,
-          background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
-          WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", marginBottom:4,
-        }}>INSCRIÇÃO</div>
-        <div style={{ color:Q.pink, fontWeight:700, fontSize:13, marginBottom:18 }}>{t.nome}</div>
-
-        <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
-          {[{label:"Nome da atleta *",k:"nome",ph:"Seu nome completo"},{label:"Nome da dupla *",k:"dupla",ph:"Nome da parceira"},{label:"Contato (WhatsApp) *",k:"contato",ph:"(41) 99999-0000"}].map(f=>(
-            <div key={f.k}>
-              <label style={{ fontSize:11, fontWeight:700, color:Q.gray, letterSpacing:.5, display:"block", marginBottom:5 }}>{f.label.toUpperCase()}</label>
-              <input value={form[f.k]} onChange={e=>setForm(p=>({...p,[f.k]:e.target.value}))} placeholder={f.ph}
-                style={{ width:"100%", padding:"12px 14px", borderRadius:12, border:`2px solid ${form[f.k]?Q.pink:Q.border}`, fontSize:14, outline:"none", boxSizing:"border-box", fontFamily:"inherit", background:Q.white }} />
-            </div>
-          ))}
-
-          <div>
-            <label style={{ fontSize:11, fontWeight:700, color:Q.gray, letterSpacing:.5, display:"block", marginBottom:6 }}>CATEGORIA *</label>
-            <div style={{ display:"flex", gap:8 }}>
-              {t.cats.map(c=>(
-                <button key={c} onClick={()=>setForm(p=>({...p,cat:c}))} style={{
-                  flex:1, padding:"12px 0", borderRadius:12, cursor:"pointer", border:"none",
-                  background: form.cat===c?`linear-gradient(135deg,${Q.pink},${Q.pinkD})`:Q.grayL,
-                  color: form.cat===c?Q.white:Q.gray,
-                  fontFamily:"'Bebas Neue',sans-serif", fontSize:20, letterSpacing:1,
-                  boxShadow: form.cat===c?`0 4px 14px ${Q.pink}44`:"none",
-                  transition:"all .2s",
-                }}>CAT {c}</button>
-              ))}
-            </div>
-          </div>
-
-          <button onClick={()=>{ if(pronto) setOk(true); }} style={{
-            padding:"15px 0", borderRadius:14, border:"none",
-            background: pronto?`linear-gradient(135deg,${Q.pink},${Q.pinkD})`:Q.grayL,
-            color: pronto?Q.white:Q.gray,
-            fontWeight:900, fontSize:15, cursor:"pointer", letterSpacing:1, marginTop:4,
-            boxShadow: pronto?`0 6px 20px ${Q.pink}44`:"none", transition:"all .2s",
-          }}>👑 CONFIRMAR INSCRIÇÃO</button>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div style={{ padding:"20px 16px" }}>
-      <div style={{ marginBottom:16 }}>
-        <div style={{
-          fontFamily:"'Bebas Neue',sans-serif", fontSize:28, letterSpacing:3,
-          background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
-          WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
-        }}>INSCRIÇÕES</div>
-        <div style={{ color:Q.gray, fontSize:12 }}>Torneios com vagas abertas · Exclusivo feminino</div>
-      </div>
-
-      {abertas.length===0 ? (
-        <div style={{ textAlign:"center", padding:40, color:Q.gray }}>
-          <div style={{ fontSize:40, marginBottom:12 }}>👑</div>
-          Nenhum torneio com inscrições abertas no momento.
-        </div>
-      ) : abertas.map(t=>(
-        <div key={t.id} style={{
-          background:Q.bgCard, borderRadius:16,
-          overflow:"hidden", boxShadow:`0 4px 16px ${Q.pink}20`, marginBottom:14,
-        }}>
-          <div style={{ background:`linear-gradient(135deg,${Q.dark},#3A0030)`, padding:"14px 16px" }}>
-            <div style={{
-              fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:1,
-              background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
-              WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
-            }}>{t.nome}</div>
-            <div style={{ color:"rgba(255,255,255,.6)", fontSize:11, marginTop:4 }}>📍 {t.local} · {fmtDate(t.data)}</div>
-          </div>
-          <div style={{ padding:"14px 16px" }}>
-            <div style={{ display:"flex", gap:16, marginBottom:12 }}>
-              <div><div style={{ fontSize:10,color:Q.gray }}>PREMIAÇÃO</div><div style={{ fontWeight:700,color:Q.pink }}>{t.premio}</div></div>
-              <div><div style={{ fontSize:10,color:Q.gray }}>VAGAS</div><div style={{ fontWeight:700,color:t.vagasRestantes<10?Q.pink:Q.dark }}>{t.vagasRestantes} restantes</div></div>
-            </div>
-            <div style={{ background:Q.grayL, borderRadius:8, height:5, overflow:"hidden", marginBottom:12 }}>
-              <div style={{ width:`${((t.vagas-t.vagasRestantes)/t.vagas)*100}%`, height:"100%", background:`linear-gradient(90deg,${Q.pink},${Q.lime})`, borderRadius:8 }}/>
-            </div>
-            <button onClick={()=>setSel(t.id)} style={{
-              width:"100%", padding:"13px 0", borderRadius:12, border:"none",
-              background:`linear-gradient(135deg,${Q.pink},${Q.pinkD})`,
-              color:Q.white, fontFamily:"'Bebas Neue',sans-serif",
-              fontSize:16, letterSpacing:2, cursor:"pointer",
-              boxShadow:`0 6px 20px ${Q.pink}44`,
-            }}>INSCREVER-SE →</button>
-          </div>
-        </div>
-      ))}
     </div>
   );
 }
