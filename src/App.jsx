@@ -386,9 +386,9 @@ const rankings = { C: rankC, D: rankD, E: rankE };
 
 // ─── LINKS DOS PDFs ──────────────────────────────────────────────
 const pdfLinks = {
-  C: "https://drive.google.com/file/d/1XXzDT8BrlexGRdmfY_czXSUJ8p4uxjv-/view?usp=drive_link",
-  D: "https://drive.google.com/file/d/17j5-Wk_Q7H_ZFZ1i9Wlvv2XdtFLvJM3y/view?usp=drive_link",
-  E: "https://drive.google.com/file/d/1SE3XnyijuVq9O7I-nWX_2ezHS7Z2SHnj/view?usp=drive_link",
+  C: "https://drive.google.com/file/d/12UdCGazDBIaUTn3j-Zoh3tzYgyMHDjj9/view?usp=drive_link",
+  D: "https://drive.google.com/file/d/1NSshbZxxIFuQEwHgQLF53Rwy9RnEKeWh/view?usp=drive_link",
+  E: "https://drive.google.com/file/d/1lVLdMiK_72E48Ss324R7xdF8h29GGj2F/view?usp=drive_link",
 };
 
 // ─── TORNEIOS ─────────────────────────────────────────────────────
