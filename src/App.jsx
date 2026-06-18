@@ -427,7 +427,7 @@ const etapas = [
   { num:8,  data:"25/jun",    local:"ARENA 3",   done:false },
   { num:9,  data:"10/jul",    local:"PAHRAGON",  done:false },
   { num:10, data:"23/jul",    local:"INOVE",     done:false },
-  { num:11, data:"27/ago",    local:"WIN ECO",   done:false },
+  { num:11, data:"27/ago",    local:"",          done:false },
   { num:12, data:"A definir", local:"",          done:false },
   { num:13, data:"A definir", local:"",          done:false },
   { num:14, data:"A definir", local:"",          done:false },
@@ -503,30 +503,37 @@ function Podium({ players }) {
 }
 
 function RankItem({ p, i }) {
+  const isFinalist = p.rank <= 16;
+  const isMedal    = i < 3;
   return (
     <div style={{
-      background: Q.bgCard,
+      background: isFinalist ? (isMedal ? Q.bgCard : `linear-gradient(135deg,${Q.pink}08,${Q.lime}08)`) : Q.bgCard,
       borderRadius:12, padding:"12px 14px",
       display:"flex", alignItems:"center", gap:12,
-      boxShadow: i<3?"0 3px 10px rgba(255,46,173,.12)":"0 1px 4px rgba(0,0,0,.05)",
-      borderLeft:`4px solid ${i===0?Q.lime:i===1?medalClr[1]:i===2?medalClr[2]:Q.border}`,
+      boxShadow: isMedal?"0 3px 10px rgba(255,46,173,.12)":isFinalist?"0 2px 8px rgba(200,230,0,.15)":"0 1px 4px rgba(0,0,0,.05)",
+      borderLeft:`4px solid ${i===0?Q.lime:i===1?medalClr[1]:i===2?medalClr[2]:isFinalist?Q.lime+"99":Q.border}`,
       marginBottom:7,
     }}>
       <div style={{
         width:30, height:30, borderRadius:"50%", flexShrink:0,
-        background: i<3
+        background: isMedal
           ? `linear-gradient(135deg,${[Q.lime,medalClr[1],medalClr[2]][i]},${Q.pinkD})`
-          : Q.grayL,
+          : isFinalist
+            ? `linear-gradient(135deg,${Q.lime}44,${Q.limeD}44)`
+            : Q.grayL,
         display:"flex", alignItems:"center", justifyContent:"center",
-        fontWeight:900, fontSize:13, color:i<3?Q.white:Q.gray,
+        fontWeight:900, fontSize:13,
+        color: isMedal?Q.white:isFinalist?Q.limeD:Q.gray,
+        border: isFinalist && !isMedal ? `1.5px solid ${Q.lime}88` : "none",
       }}>{p.rank}</div>
       <div style={{ flex:1 }}>
         <div style={{ fontWeight:700, fontSize:14, color:Q.dark }}>{p.name}</div>
+        {isFinalist && <div style={{ fontSize:9, color:Q.limeD, fontWeight:700, letterSpacing:.5, marginTop:1 }}>👑 CLASSIFICADA PARA O FINALS</div>}
       </div>
       <div style={{ textAlign:"right" }}>
         <div style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:22, letterSpacing:1,
-          color: i===0?Q.lime:Q.pink,
+          color: i===0?Q.lime:isFinalist?Q.pink:Q.pink,
         }}>{p.pts}</div>
         <div style={{ fontSize:9, color:Q.gray, letterSpacing:.5 }}>PONTOS</div>
       </div>
@@ -590,6 +597,19 @@ function RankingTab() {
       </div>
 
       <Podium players={data.slice(0,3)} />
+
+      {/* Badge Finals */}
+      <div style={{
+        display:"flex", alignItems:"center", gap:8,
+        background:`linear-gradient(135deg,${Q.lime}22,${Q.limeD}11)`,
+        border:`1.5px solid ${Q.lime}88`, borderRadius:10,
+        padding:"8px 12px", marginBottom:12,
+      }}>
+        <span style={{fontSize:16}}>👑</span>
+        <div style={{ fontSize:11, color:Q.dark }}>
+          <span style={{color:Q.limeD}}>👑 As 16 primeiras do ranking atual disputarão o Finals 2026</span>
+        </div>
+      </div>
 
       <div>
         {data.map((p,i)=><RankItem key={i} p={p} i={i} />)}
