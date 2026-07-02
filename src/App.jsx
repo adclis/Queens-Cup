@@ -500,7 +500,7 @@ const rankings = { C: rankC, D: rankD, E: rankE, Sub15: rankSub15 };
 // ─── LINKS DOS PDFs ──────────────────────────────────────────────
 const pdfLinks = {
   C: "https://drive.google.com/file/d/1f6WiPoDGr-W0DKNftDCpwrExIElVotVJ/view?usp=drive_link",
-  D: "https://drive.google.com/file/d/1BgYSs_mSRIQwQ2G_Rqf4jkVI71AddIAA/view?usp=drive_link",
+  D: "https://drive.google.com/file/d/1y9Ad_IftNu3WFj6H_1k0Xl4HAyKc26Y4/view?usp=drive_link",
   E: "https://drive.google.com/file/d/1kgqcAloiaLsTnlQFODNx31YwafBQ79Qn/view?usp=drive_link",
   Sub15: "https://drive.google.com/file/d/1NhTcMZVhYf-CNj4hVUTnYR677gW3YvJ3/view?usp=drive_link",
 };
