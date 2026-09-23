@@ -192,11 +192,11 @@ const rankC = [
 
 // ─── RANKING OFICIAL Cat D (PDF — Feminina D 2026 · 13 etapas · 223 atletas) ──
 const rankD = [
-  { rank:1, name:"Camila Almeida", pts:4850 },
+  { rank:1, name:"Camila Almeida", pts:5400 },
   { rank:2, name:"Dayane Ramos", pts:4450 },
-  { rank:3, name:"Cristiane Lirmann", pts:3800 },
-  { rank:3, name:"Eliane Fabrini", pts:3800 },
-  { rank:5, name:"Julliane Azevedo", pts:3250 },
+  { rank:3, name:"Cristiane Lirmann", pts:4350 },
+  { rank:4, name:"Eliane Fabrini", pts:3800 },
+  { rank:5, name:"Julliane Azevedo", pts:3450 },
   { rank:6, name:"Mauren Colombo", pts:3050 },
   { rank:7, name:"Ale Nunes", pts:2900 },
   { rank:8, name:"Patty Calgaro", pts:2550 },
@@ -445,11 +445,11 @@ const rankE = [
   { rank:23, name:"Monique De Lazari", pts:1100 },
   { rank:25, name:"Laura Moreschi", pts:1050 },
   { rank:26, name:"Daniele Pandini", pts:900 },
+  { rank:26, name:"Francielli Scarpetta", pts:900 },
   { rank:26, name:"Janaina Torres", pts:900 },
   { rank:26, name:"Karine Age", pts:900 },
   { rank:26, name:"Karol Boriolo", pts:900 },
   { rank:26, name:"Luisa Socher", pts:900 },
-  { rank:31, name:"Francielli Scarpetta", pts:850 },
   { rank:32, name:"Rose Esudero", pts:800 },
   { rank:33, name:"Adri Vidal", pts:700 },
   { rank:33, name:"Juliana Torres", pts:700 },
@@ -677,10 +677,10 @@ const rankings = { C: rankC, D: rankD, E: rankE, Sub15: rankSub15 };
 
 // ─── LINKS DOS PDFs ──────────────────────────────────────────────
 const pdfLinks = {
-  C: "https://drive.google.com/file/d/1lGWyVnz-D3KOlVJuOmJ8YB4akKiciCsy/view?usp=drive_link",
-  D: "https://drive.google.com/file/d/1aJwfByI5h_HUprraIeAtVy5KI4OFA55m/view?usp=drive_link",
-  E: "https://drive.google.com/file/d/1mrP3KqBC8e6Oqz1jjhseajCdJJuByKJz/view?usp=drive_link",
-  Sub15: "https://drive.google.com/file/d/1QPLESD960M2O7sa364RHASYoxdQFEYnW/view?usp=drive_link",
+  C: "https://drive.google.com/file/d/1fmKQWwZ0w9ChQdYB5xqYesrcV_C6Jop7/view?usp=drive_link",
+  D: "https://drive.google.com/file/d/1PCh4r5dDrnraiTgRimtE7ph-mOxW-SWU/view?usp=drive_link",
+  E: "https://drive.google.com/file/d/1RdEXolTXw9DEUXec7JKi1yeAwYwOcghh/view?usp=drive_link",
+  Sub15: "https://drive.google.com/file/d/1VrAcvgW34K3dviUPchhtjGx2HGKmhYnV/view?usp=drive_link",
 };
 
 // ─── TORNEIOS ─────────────────────────────────────────────────────
