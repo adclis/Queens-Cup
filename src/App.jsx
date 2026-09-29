@@ -43,7 +43,7 @@ function QueensLogo({ size = 48 }) {
       <path d="M5 68 Q35 62 75 65" stroke={Q.pink} strokeWidth="4" strokeLinecap="round" fill="none"/>
     </svg>
   );
-}                                        
+}
 
 // ─── RANKING OFICIAL Cat C (PDF — Feminina C 2026 · 14 etapas · 145 atletas) ──
 const rankC = [
