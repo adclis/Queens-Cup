@@ -985,4 +985,29 @@ function EtapasTab() {
                   <div style={{ fontSize:11, color:Q.gray }}>{e.data}</div>
                 </div>
                 <span style={{
-           
+                  background: e.done?`${Q.lime}22`:`${Q.pink}15`,
+                  color: e.done?Q.limeD:Q.pink,
+                  borderRadius:20, padding:"3px 10px", fontSize:10, fontWeight:700,
+                }}>{e.done?"✓ Realizada":"Em breve"}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── ROOT ──────────────────────────────────────────────────────────
+export default function App() {
+  const [tab, setTab] = useState("ranking");
+  return (
+    <div style={{ maxWidth:430, margin:"0 auto", minHeight:"100vh", background:Q.bg, fontFamily:"'DM Sans',sans-serif" }}>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+      <Header activeTab={tab} setActiveTab={setTab}/>
+      {tab==="ranking" && <RankingTab/>}
+      {tab==="etapas"  && <EtapasTab/>}
+      <div style={{height:30}}/>
+    </div>
+  );
+}
