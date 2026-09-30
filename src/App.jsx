@@ -696,6 +696,7 @@ const rankSub15 = [
   { rank:16, name:"Manuela Cobra Costa", pts:50 },
   { rank:16, name:"Nicole Grobe Luprin", pts:50 },
 ];
+
 const rankings = { C: rankC, D: rankD, E: rankE, Sub15: rankSub15 };
 
 // ─── LINKS DOS PDFs ──────────────────────────────────────────────
@@ -706,25 +707,51 @@ const pdfLinks = {
   Sub15: "https://drive.google.com/file/d/1RBT2JKkOSAm1SgyqjESQWJZdI6l_VNk_/view?usp=sharing",
 };
 
-const etapas = [
-  { num:1,  data:"21/jan", local:"ARENA 3",              done:true  },
-  { num:2,  data:"11/fev", local:"PAHRAGON",             done:true  },
-  { num:3,  data:"12/mar", local:"WIN ECO",              done:true  },
-  { num:4,  data:"26/mar", local:"ARENA 3",              done:true  },
-  { num:5,  data:"25/abr", local:"INOVE",                done:true  },
-  { num:6,  data:"14/mai", local:"ARENA 3",              done:true  },
-  { num:7,  data:"29/mai", local:"CBS",                  done:true  },
-  { num:8,  data:"25/jun", local:"ARENA 3",              done:true  },
-  { num:9,  data:"09/jul", local:"PAHRAGON",             done:true  },
-  { num:10, data:"23/jul", local:"INOVE",                done:true  },
-  { num:11, data:"27/ago", local:"Arena 3",              done:true  },
-  { num:12, data:"11/set", local:"CBS",                  done:true  },
-  { num:13, data:"18/set", local:"Arena 3 (Dupla Fixa)", done:true  },
-  { num:14, data:"24/set", local:"PAHRAGON",             done:true  },
-  { num:15, data:"15/out", local:"Pier",                 done:false },
-  { num:16, data:"05/nov", local:"Arena 3",              done:false },
+// ─── TORNEIOS ─────────────────────────────────────────────────────
+const torneios = [
+  {
+    id:1, nome:"Queen's Cup — Etapa Verão",
+    data:"2026-06-21", dataFim:"2026-06-22",
+    local:"Arena 3, Curitiba",
+    cats:["C","D","E"], status:"inscricoes",
+    premio:"R$ 4.000", vagas:48, vagasRestantes:18,
+  },
+  {
+    id:2, nome:"Queen's Cup — Etapa Inverno",
+    data:"2026-07-26", dataFim:"2026-07-27",
+    local:"Pahragon Club, Londrina",
+    cats:["C","D","E"], status:"breve",
+    premio:"R$ 4.500", vagas:48, vagasRestantes:48,
+  },
+  {
+    id:3, nome:"Queen's Cup — Grand Final",
+    data:"2026-11-08", dataFim:"2026-11-09",
+    local:"CBS Arena, Curitiba",
+    cats:["C","D","E"], status:"breve",
+    premio:"R$ 10.000", vagas:64, vagasRestantes:64,
+  },
 ];
 
+const etapas = [
+  { num:1,  data:"21/jan", local:"ARENA 3",               done:true  },
+  { num:2,  data:"11/fev", local:"PAHRAGON",              done:true  },
+  { num:3,  data:"12/mar", local:"WIN ECO",               done:true  },
+  { num:4,  data:"26/mar", local:"ARENA 3",               done:true  },
+  { num:5,  data:"25/abr", local:"INOVE",                 done:true  },
+  { num:6,  data:"14/mai", local:"ARENA 3",               done:true  },
+  { num:7,  data:"29/mai", local:"CBS",                   done:true  },
+  { num:8,  data:"25/jun", local:"ARENA 3",               done:true  },
+  { num:9,  data:"09/jul", local:"PAHRAGON",              done:true  },
+  { num:10, data:"23/jul", local:"INOVE",                 done:true  },
+  { num:11, data:"27/ago", local:"Arena 3",               done:true  },
+  { num:12, data:"11/set", local:"CBS",                   done:true  },
+  { num:13, data:"18/set", local:"Arena 3 (Dupla Fixa)",  done:true  },
+  { num:14, data:"24/set", local:"PAHRAGON",              done:true  },
+  { num:15, data:"15/out", local:"Pier",                  done:false },
+  { num:16, data:"05/nov", local:"Arena 3",               done:false },
+];
+
+const fmtDate = d => new Date(d+"T12:00:00").toLocaleDateString("pt-BR",{day:"2-digit",month:"short"});
 const medalClr = ["#D4A017","#C0C0C0","#CD7F32"];
 
 // ─── COMPONENTES ─────────────────────────────────────────────────
@@ -734,8 +761,8 @@ function Header({ activeTab, setActiveTab }) {
     { id:"etapas",  icon:"📅", label:"ETAPAS"  },
   ];
   return (
-    <nav style={ background: Q.dark, borderBottom:`3px solid ${Q.lime}`, position:"sticky", top:0, zIndex:100 }>
-      <div style={ display:"flex", alignItems:"center", gap:12, padding:"14px 18px 10px" }>
+    <nav style={{ background: Q.dark, borderBottom:`3px solid ${Q.lime}`, position:"sticky", top:0, zIndex:100 }}>
+      <div style={{ display:"flex", alignItems:"center", gap:12, padding:"14px 18px 10px" }}>
         <QueensLogo size={44} />
         <div>
           <div style={{
@@ -744,10 +771,10 @@ function Header({ activeTab, setActiveTab }) {
             background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
             WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
           }}>QUEEN'S CUP</div>
-          <div style={ color:"rgba(255,255,255,.45)", fontSize:9, letterSpacing:2 }>BEACH TÊNIS · EXCLUSIVO FEMININO · 2026</div>
+          <div style={{ color:"rgba(255,255,255,.45)", fontSize:9, letterSpacing:2 }}>BEACH TÊNIS · EXCLUSIVO FEMININO · 2026</div>
         </div>
       </div>
-      <div style={ display:"flex", borderTop:"1px solid rgba(255,255,255,.08)" }>
+      <div style={{ display:"flex", borderTop:"1px solid rgba(255,255,255,.08)" }}>
         {tabs.map(t => (
           <button key={t.id} onClick={()=>setActiveTab(t.id)} style={{
             flex:1, padding:"10px 4px", border:"none", cursor:"pointer",
@@ -772,13 +799,13 @@ function Podium({ players }) {
   const emojis  = ["🥈","🥇","🥉"];
   const colors  = [medalClr[1], medalClr[0], medalClr[2]];
   return (
-    <div style={ display:"flex", alignItems:"flex-end", gap:8, marginBottom:20 }>
+    <div style={{ display:"flex", alignItems:"flex-end", gap:8, marginBottom:20 }}>
       {order.map((p,i)=>(
-        <div key={i} style={ flex:1, display:"flex", flexDirection:"column", alignItems:"center" }>
-          <div style={ fontSize:11, fontWeight:700, color:Q.dark, textAlign:"center", marginBottom:2 }>
+        <div key={i} style={{ flex:1, display:"flex", flexDirection:"column", alignItems:"center" }}>
+          <div style={{ fontSize:11, fontWeight:700, color:Q.dark, textAlign:"center", marginBottom:2 }}>
             {p.name.split(" ")[0]}
           </div>
-          <div style={ fontSize:12, fontWeight:900, color:colors[i] }>{p.pts}pts</div>
+          <div style={{ fontSize:12, fontWeight:900, color:colors[i] }}>{p.pts}pts</div>
           <div style={{
             width:"100%", height:heights[i], borderRadius:"10px 10px 0 0", marginTop:6,
             background: i===1
@@ -816,16 +843,16 @@ function RankItem({ p, i }) {
         color: isMedal?Q.white:isFinalist?Q.limeD:Q.gray,
         border: isFinalist && !isMedal ? `1.5px solid ${Q.lime}88` : "none",
       }}>{p.rank}</div>
-      <div style={ flex:1 }>
-        <div style={ fontWeight:700, fontSize:14, color:Q.dark }>{p.name}</div>
-        {isFinalist && <div style={ fontSize:9, color:Q.limeD, fontWeight:700, letterSpacing:.5, marginTop:1 }>👑 CLASSIFICADA PARA O FINALS</div>}
+      <div style={{ flex:1 }}>
+        <div style={{ fontWeight:700, fontSize:14, color:Q.dark }}>{p.name}</div>
+        {isFinalist && <div style={{ fontSize:9, color:Q.limeD, fontWeight:700, letterSpacing:.5, marginTop:1 }}>👑 CLASSIFICADA PARA O FINALS</div>}
       </div>
-      <div style={ textAlign:"right" }>
+      <div style={{ textAlign:"right" }}>
         <div style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:22, letterSpacing:1,
           color: i===0?Q.lime:isFinalist?Q.pink:Q.pink,
         }}>{p.pts}</div>
-        <div style={ fontSize:9, color:Q.gray, letterSpacing:.5 }>PONTOS</div>
+        <div style={{ fontSize:9, color:Q.gray, letterSpacing:.5 }}>PONTOS</div>
       </div>
     </div>
   );
@@ -840,17 +867,17 @@ function RankingTab() {
   const catLabels = { C: "CAT C", D: "CAT D", E: "CAT E", Sub15: "SUB 15" };
 
   return (
-    <div style={ padding:"20px 16px" }>
-      <div style={ marginBottom:16 }>
+    <div style={{ padding:"20px 16px" }}>
+      <div style={{ marginBottom:16 }}>
         <div style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:28, letterSpacing:3,
           background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
           WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
         }}>RANKING OFICIAL</div>
-        <div style={ color:Q.gray, fontSize:12 }>Temporada 2026 · Feminino</div>
+        <div style={{ color:Q.gray, fontSize:12 }}>Temporada 2026 · Feminino</div>
       </div>
 
-      <div style={ display:"flex", gap:6, marginBottom:18 }>
+      <div style={{ display:"flex", gap:6, marginBottom:18 }}>
         {["C","D","E","Sub15"].map(c=>(
           <button key={c} onClick={()=>setCat(c)} style={{
             flex:1, padding:"11px 0", border:"none", cursor:"pointer", borderRadius:12,
@@ -872,7 +899,7 @@ function RankingTab() {
       }}>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
           <span style={{fontSize:16}}>📄</span>
-          <div style={ fontSize:11, color:Q.dark }>
+          <div style={{ fontSize:11, color:Q.dark }}>
             <strong style={{color:Q.pinkD}}>Dados oficiais</strong> — {counts[cat]} atletas · {etapasRealizadas[cat]} etapas realizadas · 2026
           </div>
         </div>
@@ -898,7 +925,7 @@ function RankingTab() {
         padding:"8px 12px", marginBottom:12,
       }}>
         <span style={{fontSize:16}}>👑</span>
-        <div style={ fontSize:11, color:Q.dark }>
+        <div style={{ fontSize:11, color:Q.dark }}>
           <span style={{color:Q.limeD}}>👑 As 16 primeiras do ranking atual disputarão o Finals 2026</span>
         </div>
       </div>
@@ -912,17 +939,17 @@ function RankingTab() {
 
 function EtapasTab() {
   return (
-    <div style={ padding:"20px 16px" }>
-      <div style={ marginBottom:16 }>
+    <div style={{ padding:"20px 16px" }}>
+      <div style={{ marginBottom:16 }}>
         <div style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:28, letterSpacing:3,
           background:`linear-gradient(90deg,${Q.pink},${Q.lime})`,
           WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent",
         }}>ETAPAS 2026</div>
-        <div style={ color:Q.gray, fontSize:12 }>Calendário completo · {etapas.filter(e=>e.done).length} de {etapas.length} realizadas</div>
+        <div style={{ color:Q.gray, fontSize:12 }}>Calendário completo · {etapas.filter(e=>e.done).length} de {etapas.length} realizadas</div>
       </div>
 
-      <div style={ background:Q.grayL, borderRadius:8, height:8, overflow:"hidden", marginBottom:20 }>
+      <div style={{ background:Q.grayL, borderRadius:8, height:8, overflow:"hidden", marginBottom:20 }}>
         <div style={{
           width:`${(etapas.filter(e=>e.done).length/etapas.length)*100}%`,
           height:"100%", borderRadius:8,
@@ -931,10 +958,10 @@ function EtapasTab() {
         }} />
       </div>
 
-      <div style={ marginBottom:24 }>
+      <div style={{ marginBottom:24 }}>
         {etapas.map((e,i)=>(
-          <div key={i} style={ display:"flex", gap:12, alignItems:"flex-start" }>
-            <div style={ display:"flex", flexDirection:"column", alignItems:"center", width:32 }>
+          <div key={i} style={{ display:"flex", gap:12, alignItems:"flex-start" }}>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"center", width:32 }}>
               <div style={{
                 width:28, height:28, borderRadius:"50%", flexShrink:0,
                 background: e.done
@@ -944,7 +971,7 @@ function EtapasTab() {
                 fontSize:11, fontWeight:700, color:e.done?Q.dark:Q.gray,
               }}>{e.num}</div>
               {i<etapas.length-1 && (
-                <div style={ width:2, height:18, background:e.done?Q.lime:Q.border, margin:"3px 0" } />
+                <div style={{ width:2, height:18, background:e.done?Q.lime:Q.border, margin:"3px 0" }} />
               )}
             </div>
             <div style={{
@@ -952,35 +979,10 @@ function EtapasTab() {
               borderRadius:12, padding:"10px 14px", marginBottom:6,
               border:`1px solid ${e.done?Q.lime+"55":Q.border}`,
             }}>
-              <div style={ display:"flex", justifyContent:"space-between", alignItems:"center" }>
+              <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
                 <div>
-                  <div style={ fontWeight:700, fontSize:13, color:Q.dark }>Etapa {e.num} — {e.local}</div>
-                  <div style={ fontSize:11, color:Q.gray }>{e.data}</div>
+                  <div style={{ fontWeight:700, fontSize:13, color:Q.dark }}>Etapa {e.num} — {e.local}</div>
+                  <div style={{ fontSize:11, color:Q.gray }}>{e.data}</div>
                 </div>
                 <span style={{
-                  background: e.done?`${Q.lime}22`:`${Q.pink}15`,
-                  color: e.done?Q.limeD:Q.pink,
-                  borderRadius:20, padding:"3px 10px", fontSize:10, fontWeight:700,
-                }}>{e.done?"✓ Realizada":"Em breve"}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ─── ROOT ──────────────────────────────────────────────────────────
-export default function App() {
-  const [tab, setTab] = useState("ranking");
-  return (
-    <div style={ maxWidth:430, margin:"0 auto", minHeight:"100vh", background:Q.bg, fontFamily:"'DM Sans',sans-serif" }>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;600;700;900&display=swap" rel="stylesheet"/>
-      <Header activeTab={tab} setActiveTab={setTab}/>
-      {tab==="ranking" && <RankingTab/>}
-      {tab==="etapas"  && <EtapasTab/>}
-      <div style={{height:30}}/>
-    </div>
-  );
-}
+           
